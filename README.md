@@ -1,4 +1,4 @@
-# img_pass
+# file_pass
  springboot 简单的文件传输学习。
  实现简单的图片上传和访问图片。
  主要是了解一下流程和方法。
@@ -7,8 +7,14 @@
     由webstorm创建一个纯HTML，位置：HTML_by_WebStorm\file_pass.html
 
 ## thinking
-   1. 搞了很久老是upload_api 404，最后选择尝试了thyme leaf，也不行，最终发现是@RestController注解木有加QWQ。
-   2. 过程中遇到一个问题，/downloadFile_api映射到本地可以获取图片，/downloadFile_api/{filename}不可以获取图片。不知道怎么又可以用/downloadFile_api/img1.jpg获取图片情况下，又获取GET方法传递过来的img1.jpg参数
+   1. 搞了很久老是upload_api 404，最后选择尝试了thyme leaf，也不行，最终发现是@RestController注解木有加QWQ。 
+
+---
+   
+   2. 过程中遇到一个问题，/downloadFile_api映射到本地可以获取图片，/downloadFile_api/{filename}不可以获取图片。 不知道怎么又可以用/downloadFile_api/img1.jpg获取图片情况下，又获取GET方法传递过来的img1.jpg参数
+
+---
+
    3. 映射路径的获取有两种写法，可以在test中查看或者运行下test查看输出结果。
 
 ## reference
