@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <title>picture upload and download</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:8081/uploadFile_api" method="post" enctype="multipart/form-data">
+        <label>上传图片</label>
+        <br>
+        <input type="file" name="file"/>
+        <br>
+        <input name="fileName" placeholder="img1"/>
+        <br>
+        <input type="submit" value="上传"/>
+    </form>
+
+    <br><br>
+
+    <label>获取图片:</label>
+    <br>
+    <input id="filename" value="img1.jpg"/>
+    <br>
+    <button id="getSrc">点击更新图片链接</button>
+    <br>
+    <img id="img" src="http://127.0.0.1:8081/downloadFile_api/img1.jpg" width="200px" height="200px"/>
+</body>
+<script>
+    document.getElementById("getSrc").onclick = function () {
+        var input = document.getElementById("filename");
+        fileSrc = "http://127.0.0.1:8081/downloadFile_api/" + input.value;
+
+        document.getElementById("img").src = fileSrc;
+        console.log(fileSrc);
+    }
+</script>
+</html>

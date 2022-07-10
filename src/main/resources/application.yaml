@@ -1,0 +1,7 @@
+server:
+  port: 8081
+spring:
+  web:
+    resources:
+      static-locations: classpath:static/,file:static/
+
